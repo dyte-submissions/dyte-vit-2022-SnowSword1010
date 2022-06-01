@@ -7,13 +7,12 @@ import json
 import truncate
 import compareStrings
 
-def compare_versions(repo_url, dependency, name):
+def compare_versions(repo_url, dependency, name, updateFlag):
     print("name: " + str(name))
     print("repo: " + str(repo_url))
     # creating a directory which will store the cloned project temporarily
     os.mkdir('test')
     Repo.clone_from(repo_url, 'test')
-    
     # getting dependency name and version as specified by the user
     dependencyArr = truncate.truncate(dependency)
     dependencyName = dependencyArr[0]
@@ -21,24 +20,44 @@ def compare_versions(repo_url, dependency, name):
     
     # getting full path of the test directory
     path = os.path.join(os.getcwd(), 'test')
+    flag = False
+    newData = {}
     # opening package.json file
     with open(path + "/package.json") as f:
         data = json.load(f)
         # stores version of the specified dependency
         version = ""
+        symbols = ""
         try:
             string = data['dependencies'][dependencyName]
             for i in range(0, len(string)):
                 # Removing any ^, ~ or similar symbols
                 if(((ord(string[i])-ord('0')) >= 0 and (ord(string[i])-ord('0')) <= 9) or string[i] == '.'):
                     version += string[i]
+                else:
+                    symbols += string[i]
             print("version: " +str(version))
             # comparing the version numbers
             flag = compareStrings.compareStrings(version, dependencyVersion)
             print("version_satisfied: " + str(flag))
         except:
             print("version_satisfied: Dependency not found")
+    
+        if(updateFlag == False or flag == True):
+            # removing directory
+            shutil.rmtree(path)
+            print()
+            return flag
+        
+        data['dependencies'][dependencyName] = symbols+dependencyVersion
+
+        print(str(dependencyName) + ": " + str(data['dependencies'][dependencyName]))
+        newData = data
+    
+    with open(path + "/package.json", 'w') as f:
+        json.dump(newData, f, indent=4)
+
     print()
-    # removing directory
     shutil.rmtree(path)
-    pass
+    
+

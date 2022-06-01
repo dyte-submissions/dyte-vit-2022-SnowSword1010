@@ -25,9 +25,10 @@ if __name__ == '__main__':
 
     for index, row in df.iterrows():
         # Checking the update flag to see if just verisons have to be compared or pull request has to be created as well
-        if(args.update == True):
-            pull_request.pull_request()
-        else:
-            # if(index == 0):
-            compare_versions.compare_versions(row['repo'], args.d, args.i.name)
+        # if(args.update == True):
+        # if(index == 1):
+        pull_request.compare_versions(row['repo'], args.d, args.i.name, args.update)
+        # else:
+        #     # if(index == 0):
+        #     compare_versions.compare_versions(row['repo'], args.d, args.i.name)
     

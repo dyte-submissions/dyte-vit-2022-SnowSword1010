@@ -1,4 +1,5 @@
 def compareStrings(str1, str2):
+    # splitting the string on period symbol
     arr1 = str1.split('.')
     arr2 = str2.split('.')
     for i in range(0, len(arr1)):
