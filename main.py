@@ -1,7 +1,6 @@
 import argparse
 import csv
 import pandas as pd
-import pull_request
 import compare_versions
 
 if __name__ == '__main__':
