@@ -43,20 +43,23 @@ def compare_versions(repo_url, dependency, name, updateFlag):
         except:
             print("version_satisfied: Dependency not found")
     
+        # if update flag is not set or flag variable is true (which means the version is compatible with what was specified in command line) then the conditional is executed
         if(updateFlag == False or flag == True):
             # removing directory
             shutil.rmtree(path)
             print()
             return flag
         
+        # updating the dependency version to what the user has specified
         data['dependencies'][dependencyName] = symbols+dependencyVersion
-
         print(str(dependencyName) + ": " + str(data['dependencies'][dependencyName]))
         newData = data
     
+    # updating package.json file locally
     with open(path + "/package.json", 'w') as f:
-        json.dump(newData, f, indent=4)
-
+        json.dump(newData, f, indent=4) # indent = 4 beautfies json file
+    
+    # removing the cloned directory
     print()
     shutil.rmtree(path)
     
