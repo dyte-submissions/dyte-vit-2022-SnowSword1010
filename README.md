@@ -25,33 +25,6 @@
 [![MIT License][license-shield]][license-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
-
-
-<!-- PROJECT LOGO -->
-<br />
-<div align="center">
-  <a href="https://github.com/github_username/repo_name">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
-  </a>
-
-<h3 align="center">project_title</h3>
-
-  <p align="center">
-    project_description
-    <br />
-    <a href="https://github.com/github_username/repo_name"><strong>Explore the docs »</strong></a>
-    <br />
-    <br />
-    <a href="https://github.com/github_username/repo_name">View Demo</a>
-    ·
-    <a href="https://github.com/github_username/repo_name/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/github_username/repo_name/issues">Request Feature</a>
-  </p>
-</div>
-
-
-
 <!-- TABLE OF CONTENTS -->
 <details>
   <summary>Table of Contents</summary>
@@ -138,6 +111,15 @@ Sample usage command:
 ```sh
   python3 main.py -update --i examples/example1.csv --d axios@0.23.4
 ```
+Sample Screenshots
+1. Help
+![Help menu](https://github.com/dyte-submissions/dyte-vit-2022-SnowSword1010/blob/main/images/help.png)
+
+2. Compare Versions
+![Comparing dependency version](https://github.com/dyte-submissions/dyte-vit-2022-SnowSword1010/blob/main/images/compare.png)
+
+3. Update Versions
+![Updating dependency version](https://github.com/dyte-submissions/dyte-vit-2022-SnowSword1010/blob/main/images/update.png)
 
 <!-- CONTACT -->
 ## Contact
