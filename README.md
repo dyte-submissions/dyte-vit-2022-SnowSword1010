@@ -141,9 +141,6 @@ Project Link: [https://github.com/dyte-submissions/dyte-vit-2022-SnowSword1010](
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
