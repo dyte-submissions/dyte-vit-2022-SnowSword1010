@@ -17,5 +17,5 @@ if __name__ == '__main__':
     df = pd.read_csv(args.i.name)
 
     for index, row in df.iterrows():
-        pull_request.compare_versions(row['repo'], args.d, args.i.name, args.update)
+        compare_versions.compare_versions(row['repo'], args.d, args.i.name, args.update)
     
