@@ -70,11 +70,6 @@
       </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
 </details>
 
@@ -82,25 +77,13 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
-
-Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `github_username`, `repo_name`, `twitter_handle`, `linkedin_username`, `email_client`, `email`, `project_title`, `project_description`
+`github_username: SnowSword1010`, `repo: dyte-vit-2022-SnowSword1010`, `twitter_handle: @jmayank2001`, `linkedin_username: mayank-1010`, `email_client: mayank.jain2019a@vitstudent.ac.in`, `email: jmayank2001@gmail.com`, `project_title: Dyte-CLI-App`, `project_description: A Cli tool for managing release process`
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-
-
 ### Built With
 
-* [Next.js](https://nextjs.org/)
-* [React.js](https://reactjs.org/)
-* [Vue.js](https://vuejs.org/)
-* [Angular](https://angular.io/)
-* [Svelte](https://svelte.dev/)
-* [Laravel](https://laravel.com)
-* [Bootstrap](https://getbootstrap.com)
-* [JQuery](https://jquery.com)
+* [Python](https://www.python.org/)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -109,106 +92,62 @@ Here's a blank template to get started: To avoid retyping too much info. Do a se
 <!-- GETTING STARTED -->
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+Given a list of Github repositories, assuming all of them are node js projects with a package.json and package-lock.json in the root, and the name and version of a dependency, we want to give the current version of that dependency and tell if the version is greater than or equal to the version specified or not.
+
+Secondly, for all the repositories that have the version lower than the one specified, if passed as additional param, let’s say `-update`, it should create a PR updating the version.
 
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
+* Have python installed
 
 ### Installation
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
+1. Clone the repo
    ```sh
-   git clone https://github.com/github_username/repo_name.git
+   git clone https://github.com/dyte-submissions/dyte-vit-2022-SnowSword1010.git
    ```
-3. Install NPM packages
+2. Create virtual environment
+  ```sh
+    python3 -m venv venv
+  ```
+3. Activate virtual environment
+  ```sh
+  source venv/bin/activate
+  ```
+4. Install requirements
    ```sh
-   npm install
-   ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
+   pip3 install -r requirements.txt
    ```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
-
-
 
 <!-- USAGE EXAMPLES -->
 ## Usage
+```sh
+  python3 main.py [-h] [-update] --i csv_filename --d dependency_name
+```
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+h flag (optional): help
+update flag (optional): sets the update flag to true which comes in required when we want to update the dependency version to the one specified by the user.
+NOTE: Although the project demanded the creation of pull requests, I could not implement the entire thing due to time constraints. I cloned the repo and made changes into it locally instead.
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+--i flag (mandatory): used to specify the csv file name where data would be read from. --i examples/example1.csv could be used to test the utility.
+--d flag (mandatory): used to specify the dependency name. --d axios@0.23.4 can be used to test the utility
 
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
-
-<!-- ROADMAP -->
-## Roadmap
-
-- [ ] Feature 1
-- [ ] Feature 2
-- [ ] Feature 3
-    - [ ] Nested Feature
-
-See the [open issues](https://github.com/github_username/repo_name/issues) for a full list of proposed features (and known issues).
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
-
-<!-- CONTRIBUTING -->
-## Contributing
-
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
-If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
-Don't forget to give the project a star! Thanks again!
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
-
-<!-- LICENSE -->
-## License
-
-Distributed under the MIT License. See `LICENSE.txt` for more information.
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
+Sample usage command:
+```sh
+  python3 main.py -update --i examples/example1.csv --d axios@0.23.4
+```
 
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email@email_client.com
+Your Name - Mayank Jain @SnowSword1010 - mayank.jain2019a@vitstudent.ac.in
 
-Project Link: [https://github.com/github_username/repo_name](https://github.com/github_username/repo_name)
+Project Link: [https://github.com/dyte-submissions/dyte-vit-2022-SnowSword1010](https://github.com/dyte-submissions/dyte-vit-2022-SnowSword1010)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-
-
-<!-- ACKNOWLEDGMENTS -->
-## Acknowledgments
-
-* []()
-* []()
-* []()
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
