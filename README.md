@@ -107,8 +107,13 @@ NOTE: Although the project demanded the creation of pull requests, I could not i
 --i flag (mandatory): used to specify the csv file name where data would be read from. --i examples/example1.csv could be used to test the utility.
 --d flag (mandatory): used to specify the dependency name. --d axios@0.23.4 can be used to test the utility
 
+Flow Diagram:
+![Flow diagram of the command line utility](https://github.com/dyte-submissions/dyte-vit-2022-SnowSword1010/blob/main/images/flow.png)
+
 Sample usage command:
 ```sh
+  python3 main.py -h
+  python3 main.py --i examples/example1.csv --d axios@0.23.4
   python3 main.py -update --i examples/example1.csv --d axios@0.23.4
 ```
 Sample Screenshots
@@ -121,6 +126,11 @@ Sample Screenshots
 3. Update Versions
 ![Updating dependency version](https://github.com/dyte-submissions/dyte-vit-2022-SnowSword1010/blob/main/images/update.png)
 
+4. A foreign version is provided (which does not exist in the project)
+![Dependency not found message](https://github.com/dyte-submissions/dyte-vit-2022-SnowSword1010/blob/main/images/dependency_error_message.png)
+
+5. Mandatory paramters not specified
+![Not enough params error message](https://github.com/dyte-submissions/dyte-vit-2022-SnowSword1010/blob/main/images/param_error_message.png)
 <!-- CONTACT -->
 ## Contact
 
